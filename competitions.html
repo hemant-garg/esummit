@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Title -->
+		<title>Candidate HTML Template</title>
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		<!-- Stylesheets -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/fontello.css" rel="stylesheet" type="text/css">
+		<link href="css/flexslider.css" rel="stylesheet" type="text/css">
+		<link href="js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+		<link href="css/responsive-calendar.css" rel="stylesheet" type="text/css">
+		<link href="css/chosen.css" rel="stylesheet" type="text/css">
+		<link href="jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/cloud-zoom.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/style2.css" rel="stylesheet" type="text/css">
+
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<link href="css/jackbox-ie8.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/ie.css">
+		<![endif]-->
+		<!--[if gt IE 8]>
+		<link href="css/jackbox-ie9.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<!--[if IE 7]>
+		<link rel="stylesheet" href="css/fontello-ie7.css">
+		<![endif]-->
+		<style type="text/css">
+			.no-fouc {display:none;}
+		</style>
+		<!-- jQuery -->
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/jquery-ui-1.10.4.min.js"></script>
+		<!-- Preloader -->
+		<script src="js/jquery.queryloader2.min.js"></script>
+		<script type="text/javascript">
+			$('html').addClass('no-fouc');
+			
+			$(document).ready(function(){
+				
+				$('html').show();
+				
+				var window_w = $(window).width();
+				var window_h = $(window).height();
+				var window_s = $(window).scrollTop();
+				
+				$("body").queryLoader2({
+					backgroundColor: '#f2f4f9',
+					barColor: '#63b2f5',
+					barHeight: 4,
+					percentage:false,
+					deepSearch:true,
+					minimumTime:1000,
+					onComplete: function(){
+						
+						$('.animate-onscroll').filter(function(index){
+						
+							return this.offsetTop < (window_s + window_h);
+							
+						}).each(function(index, value){
+							
+							var el = $(this);
+							var el_y = $(this).offset().top;
+							
+							if((window_s) > el_y){
+								$(el).addClass('animated fadeInDown').removeClass('animate-onscroll');
+								setTimeout(function(){
+									$(el).css('opacity','1').removeClass('animated fadeInDown');
+								},2000);
+							}
+							
+						});
+						
+					}
+				});
+				
+			});
+		</script>
+	</head>
+	<body class="sticky-header-on tablet-sticky-header">
+		<!-- Container -->
+		<div class="container">
+			<!-- Header -->
+			<header id="header" class="animate-onscroll">
+				<!-- Main Header -->
+				<div id="main-header">
+					<div class="container">
+						<div class="row">
+							<!-- Logo -->
+							<div id="logo" class="col-lg-2 col-md-3 col-sm-3">
+								<a href="index.html"><img src="img/logo.png"  alt="Logo"></a>
+							</div>
+							<!-- /Logo -->
+							<!-- Main Quote -->
+							<div class="col-lg-5 col-md-4 col-sm-4 site-title">
+								<h1>eCell MSIT</h1>
+							</div>
+							<!-- /Main Quote -->
+							<!-- Newsletter -->
+							<div class="col-lg-5 col-md-5 col-sm-5">
+								<form id="newsletter" action="php/newsletter-form.php" method="POST">
+									<h5><strong>Sign up</strong> for email updates</h5>
+									<div class="newsletter-form">
+										<div class="newsletter-email">
+											<input type="text" name="newsletter-email" placeholder="Email address">
+										</div>
+										<div class="newsletter-zip">
+											<input type="text" name="newsletter-zip" placeholder="Zip code">
+										</div>
+										<div class="newsletter-submit">
+											<input type="submit" value="">
+											<i class="icons icon-right-thin"></i>
+										</div>
+									</div>
+								</form>
+							</div>
+							<!-- /Newsletter -->
+						</div>
+					</div>
+				</div>
+				<!-- /Main Header -->
+				<!-- Lower Header -->
+				<div id="lower-header">
+					<div class="container">
+						<div id="menu-button">
+							<div>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<span>Menu</span>
+						</div>
+						<ul id="navigation">
+							<!-- Home -->
+							<li class="home-button current-menu-item">
+								<a href="index.html"><i class="icons icon-home"></i></a>
+								
+							</li>
+							<li >
+								<a href="index.html">E-Summit</a>
+								
+							</li>
+							<li >
+								<a href="ifair.html">Internship Fair</a>
+								
+							</li>
+							<li >
+								<a href="competion.html">Competitions</a>
+								
+							</li>
+							<li >
+								<a href="schedule.html">Schedule</a>
+								
+							</li>
+							<li >
+								<a href="otherinitiaves.html">Other Initiativess</a>
+								
+							</li>
+						
+							<li class="donate-button ">
+								<a href="register.html">Buy Tickets</a>
+							</li>
+							<!-- /Donate -->
+						</ul>
+					</div>
+				</div>
+				<!-- /Lower Header -->
+			</header>
+			<!-- /Header -->			
+	
+	<section class="section page-heading animate-onscroll">
+				
+				<h1>Competitions</h1>
+
+			</section>			
+			<br><br>
+	<div class="page-event">
+ 
+       <div class="competition-event">
+    <div class="upcoming-event-list">
+      <div class="event-block">
+        <div class="row">
+          <div class="col-lg-2 sec-1">
+            <div class="col-md-3 col-xs-3">
+                  <div class="month">Mar</div>
+                  <div class="month-date-devider"></div>
+                  <div class="date">11</div>
+            </div>
+            <div class="col-md-9 col-xs-9"> 
+                <div class="title">DASTAAN - a tribute to Rekha</div>
+			</div>
+          </div>
+          <div class="col-lg-5 sec-2">
+            <img src="https://goo.gl/QqG8p2" />
+          </div>
+          <div class="col-lg-5 sec-3">
+            <div class="title">DASTAAN - a tribute to Rekha</div>
+            <div class="row">
+            	<div class="col-md-6 venue">
+            		
+            		<div><i class="fa fa-map-marker"></i> Gyan Manch <br><span class="dim-color event-dir"> <a href="https://www.google.co.in" target="blank">Get Directions</a></span></div>
+            	</div>
+            	<div class="col-md-6 time">
+            		
+            		
+            			<div><i class="fa fa-calendar"></i> Saturday, Feb 27 <br><span class="dim-color event-time"> 5:30 PM</span></div>
+            			
+            		
+            	</div>
+            </div>
+            
+            <div class="group-of-btn">
+              <button class="md-trigger" data-modal="event1">More Details</button>
+              
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br><br><br>
+   
+
+   <div class="competition-event">
+    <div class="upcoming-event-list">
+      <div class="event-block">
+        <div class="row">
+          <div class="col-lg-2 sec-1">
+            <div class="col-md-3 col-xs-3">
+                  <div class="month">Mar</div>
+                  <div class="month-date-devider"></div>
+                  <div class="date">11</div>
+            </div>
+            <div class="col-md-9 col-xs-9"> 
+                <div class="title">DASTAAN - a tribute to Rekha</div>
+			</div>
+          </div>
+          <div class="col-lg-5 sec-2">
+            <img src="https://goo.gl/QqG8p2" />
+          </div>
+          <div class="col-lg-5 sec-3">
+            <div class="title">DASTAAN - a tribute to Rekha</div>
+            <div class="row">
+            	<div class="col-md-6 venue">
+            		
+            		<div><i class="fa fa-map-marker"></i> Gyan Manch <br><span class="dim-color event-dir"> <a href="https://www.google.co.in" target="blank">Get Directions</a></span></div>
+            	</div>
+            	<div class="col-md-6 time">
+            		
+            		
+            			<div><i class="fa fa-calendar"></i> Saturday, Feb 27 <br><span class="dim-color event-time"> 5:30 PM</span></div>
+            			
+            		
+            	</div>
+            </div>
+            
+            <div class="group-of-btn">
+              <button class="md-trigger" data-modal="event2">More Details</button>
+             
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br><br><br>
+   
+   <div class="competition-event">
+    <div class="upcoming-event-list">
+      <div class="event-block">
+        <div class="row">
+          <div class="col-lg-2 sec-1">
+            <div class="col-md-3 col-xs-3">
+                  <div class="month">Mar</div>
+                  <div class="month-date-devider"></div>
+                  <div class="date">11</div>
+            </div>
+            <div class="col-md-9 col-xs-9"> 
+                <div class="title">DASTAAN - a tribute to Rekha</div>
+			</div>
+          </div>
+          <div class="col-lg-5 sec-2">
+            <img src="https://goo.gl/QqG8p2" />
+          </div>
+          <div class="col-lg-5 sec-3">
+            <div class="title">DASTAAN - a tribute to Rekha</div>
+            <div class="row">
+            	<div class="col-md-6 venue">
+            		
+            		<div><i class="fa fa-map-marker"></i> Gyan Manch <br><span class="dim-color event-dir"> <a href="https://www.google.co.in" target="blank">Get Directions</a></span></div>
+            	</div>
+            	<div class="col-md-6 time">
+            		
+            		
+            			<div><i class="fa fa-calendar"></i> Saturday, Feb 27 <br><span class="dim-color event-time"> 5:30 PM</span></div>
+            			
+            		
+            	</div>
+            </div>
+            
+            <div class="group-of-btn">
+              <button class="md-trigger" data-modal="event3">More Details</button>
+              
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br><br><br>
+   
+   <div class="competition-event">
+    <div class="upcoming-event-list">
+      <div class="event-block">
+        <div class="row">
+          <div class="col-lg-2 sec-1">
+            <div class="col-md-3 col-xs-3">
+                  <div class="month">Mar</div>
+                  <div class="month-date-devider"></div>
+                  <div class="date">11</div>
+            </div>
+            <div class="col-md-9 col-xs-9"> 
+                <div class="title">DASTAAN - a tribute to Rekha</div>
+			</div>
+          </div>
+          <div class="col-lg-5 sec-2">
+            <img src="https://goo.gl/QqG8p2" />
+          </div>
+          <div class="col-lg-5 sec-3">
+            <div class="title">DASTAAN - a tribute to Rekha</div>
+            <div class="row">
+            	<div class="col-md-6 venue">
+            		
+            		<div><i class="fa fa-map-marker"></i> Gyan Manch <br><span class="dim-color event-dir"> <a href="https://www.google.co.in" target="blank">Get Directions</a></span></div>
+            	</div>
+            	<div class="col-md-6 time">
+            		
+            		
+            			<div><i class="fa fa-calendar"></i> Saturday, Feb 27 <br><span class="dim-color event-time"> 5:30 PM</span></div>
+            			
+            		
+            	</div>
+            </div>
+            
+            <div class="group-of-btn">
+              <button class="md-trigger" data-modal="event4">More Details</button>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br><br><br>
+   
+   <div class="competition-event">
+    <div class="upcoming-event-list">
+      <div class="event-block">
+        <div class="row">
+          <div class="col-lg-2 sec-1">
+            <div class="col-md-3 col-xs-3">
+                  <div class="month">Mar</div>
+                  <div class="month-date-devider"></div>
+                  <div class="date">11</div>
+            </div>
+            <div class="col-md-9 col-xs-9"> 
+                <div class="title">DASTAAN - a tribute to Rekha</div>
+			</div>
+          </div>
+          <div class="col-lg-5 sec-2">
+            <img src="https://goo.gl/QqG8p2" />
+          </div>
+          <div class="col-lg-5 sec-3">
+            <div class="title">DASTAAN - a tribute to Rekha</div>
+            <div class="row">
+            	<div class="col-md-6 venue">
+            		
+            		<div><i class="fa fa-map-marker"></i> Gyan Manch <br><span class="dim-color event-dir"> <a href="https://www.google.co.in" target="blank">Get Directions</a></span></div>
+            	</div>
+            	<div class="col-md-6 time">
+            		
+            		
+            			<div><i class="fa fa-calendar"></i> Saturday, Feb 27 <br><span class="dim-color event-time"> 5:30 PM</span></div>
+            			
+            		
+            	</div>
+            </div>
+            
+            <div class="group-of-btn">
+              <button class="md-trigger" data-modal="event5">More Details</button>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br><br><br>
+   
+
+
+    <div class="competition-event">
+    <div class="upcoming-event-list">
+      <div class="event-block">
+        <div class="row">
+          <div class="col-lg-2 sec-1">
+            <div class="col-md-3 col-xs-3">
+                  <div class="month">Mar</div>
+                  <div class="month-date-devider"></div>
+                  <div class="date">11</div>
+            </div>
+            <div class="col-md-9 col-xs-9"> 
+                <div class="title">DASTAAN - a tribute to Rekha</div>
+			</div>
+          </div>
+          <div class="col-lg-5 sec-2">
+            <img src="https://goo.gl/QqG8p2" />
+          </div>
+          <div class="col-lg-5 sec-3">
+            <div class="title">DASTAAN - a tribute to Rekha</div>
+            <div class="row">
+            	<div class="col-md-6 venue">
+            		
+            		<div><i class="fa fa-map-marker"></i> Gyan Manch <br><span class="dim-color event-dir"> <a href="https://www.google.co.in" target="blank">Get Directions</a></span></div>
+            	</div>
+            	<div class="col-md-6 time">
+            		
+            		
+            			<div><i class="fa fa-calendar"></i> Saturday, Feb 27 <br><span class="dim-color event-time"> 5:30 PM</span></div>
+            			
+            		
+            	</div>
+            </div>
+            
+            <div class="group-of-btn">
+              <button class="md-trigger" data-modal="event6">More Details</button>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br><br><br>
+   
+</div>
+		
+
+<div class="md-modal md-effect-10" id="event6">
+			<div class="md-content">
+				<h3>Competition Name</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit totam cupiditate cumque, voluptates consequatur saepe amet animi inventore, eos corporis deleniti ullam expedita porro repudiandae tempora officiis earum enim sed!</p>
+					
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+
+<div class="md-modal md-effect-10" id="event5">
+			<div class="md-content">
+				<h3>Competition Name</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit totam cupiditate cumque, voluptates consequatur saepe amet animi inventore, eos corporis deleniti ullam expedita porro repudiandae tempora officiis earum enim sed!</p>
+					
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+
+<div class="md-modal md-effect-10" id="event4">
+			<div class="md-content">
+				<h3>Competition Name</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit totam cupiditate cumque, voluptates consequatur saepe amet animi inventore, eos corporis deleniti ullam expedita porro repudiandae tempora officiis earum enim sed!</p>
+					
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>		
+
+<div class="md-modal md-effect-10" id="event3">
+			<div class="md-content">
+				<h3>Competition Name</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit totam cupiditate cumque, voluptates consequatur saepe amet animi inventore, eos corporis deleniti ullam expedita porro repudiandae tempora officiis earum enim sed!</p>
+					
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-10" id="event2">
+			<div class="md-content">
+				<h3>Modal Dialog</h3>
+				<div>
+					
+					<ul>
+						<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+						<li><strong>Close:</strong> click on the button below to close the modal.</li>
+					</ul>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-10" id="event1">
+			<div class="md-content">
+				<h3>Modal Dialog</h3>
+				<div>
+					<p>This is a modal window. You can do the following things with it:</p>
+					<ul>
+						<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+						<li><strong>Close:</strong> click on the button below to close the modal.</li>
+					</ul>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-overlay"></div>
+
+
+
+
+
+			<!-- Footer -->
+			<footer id="footer">
+				
+				<!-- Main Footer -->
+				<div id="main-footer">
+					
+					<div class="row">
+						
+						<div class="col-lg-3 col-md-3 col-sm-6 animate-onscroll">
+							
+							<h4>Text Widget</h4>
+							
+							<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel.<br><br>
+Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum.</p>
+							
+						</div>
+						
+						<div class="col-lg-3 col-md-3 col-sm-6 animate-onscroll">
+							
+							<h4>Campaign</h4>
+								
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 menu-container">
+								
+								<ul class="menu">
+									<li><a href="#">About</a></li>
+									<li><a href="#">Issues</a></li>
+									<li><a href="#">Media</a></li>
+									<li><a href="#">Blog</a></li> 
+									<li><a href="#">Shop</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+								
+							</div>
+							
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 menu-container">
+								
+								<ul class="menu">
+									<li><a href="#">Email updates</a></li>
+									<li><a href="#">Find events</a></li>
+									<li><a href="#">Make calls</a></li>
+									<li><a href="#">Register to vote</a></li> 
+									<li><a href="#">Donate</a></li>
+									<li><a href="#">Volunteer</a></li>
+								</ul>
+								
+							</div>
+							
+						</div>
+						
+						<div class="col-lg-3 col-md-3 col-sm-6 twitter-widget-area animate-onscroll">
+							
+							<h4>Latest Tweets</h4>
+							
+							<div class="twitter-widget">
+                                
+							</div>
+							
+							<a href="#" class="button twitter-button">Follow us on twitter</a>
+							
+						</div>
+						
+						<div class="col-lg-3 col-md-3 col-sm-6 animate-onscroll">
+							
+							<h4>Like us on facebook</h4>
+							
+							<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FFacebookDevelopers&amp;width=270&amp;height=240&amp;colorscheme=dark&amp;header=false&amp;show_faces=true&amp;stream=false&amp;show_border=false" style="border:none; overflow:hidden; width:100%; height:240px;"></iframe>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<!-- /Main Footer -->
+				
+				
+				
+				
+				<!-- Lower Footer -->
+				<div id="lower-footer">
+					
+					<div class="row">
+						
+						<div class="col-lg-4 col-md-4 col-sm-4 animate-onscroll">
+						
+							<p class="copyright">© 2014 Candidate. All Rights Reserved.</p>
+							
+						</div>
+						
+						<div class="col-lg-8 col-md-8 col-sm-8 animate-onscroll">
+							
+							<div class="social-media">
+								<ul class="social-icons">
+									<li class="facebook"><a href="#" class="tooltip-ontop" title="Facebook"><i class="icons icon-facebook"></i></a></li>
+									<li class="twitter"><a href="#" class="tooltip-ontop" title="Twitter"><i class="icons icon-twitter"></i></a></li>
+									<li class="google"><a href="#" class="tooltip-ontop" title="Google Plus"><i class="icons icon-gplus"></i></a></li>
+									<li class="youtube"><a href="#" class="tooltip-ontop" title="Youtube"><i class="icons icon-youtube-1"></i></a></li>
+									<li class="flickr"><a href="#" class="tooltip-ontop" title="Flickr"><i class="icons icon-flickr-4"></i></a></li>
+									<li class="email"><a href="#" class="tooltip-ontop" title="Email"><i class="icons icon-mail"></i></a></li>
+								</ul>
+								<ul class="social-buttons">
+									<li>
+										<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" style="border:none; overflow:hidden; height:21px; padding-top:1px;  width:50px;"></iframe>
+									</li>
+									<li>
+										<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+									</li>
+									<li>
+										<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+									</li>
+								</ul>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<!-- /Lower Footer -->
+				
+			
+			</footer>
+			<!-- /Footer -->
+			
+			
+			
+			<!-- Back To Top -->
+			<a href="#" id="button-to-top"><i class="icons icon-up-dir"></i></a>
+		
+		</div>
+		<!-- /Container -->	
+	
+		<!-- JavaScript -->
+		
+		<!-- Bootstrap -->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		
+		<!-- Modernizr -->
+		<script type="text/javascript" src="js/modernizr.js"></script>
+		
+		<!-- Sliders/Carousels -->
+		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+		
+		<!-- Revolution Slider  -->
+		<script type="text/javascript" src="js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
+		<script type="text/javascript" src="js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+		
+		<!-- Calendar -->
+		<script type="text/javascript" src="js/responsive-calendar.min.js"></script>
+		
+		<!-- Raty -->
+		<script type="text/javascript" src="js/jquery.raty.min.js"></script>
+		
+		<!-- Chosen -->
+		<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+		
+		<!-- jFlickrFeed -->
+		<script type="text/javascript" src="js/jflickrfeed.min.js"></script>
+		
+		<!-- InstaFeed -->
+		<script type="text/javascript" src="js/instafeed.min.js"></script>
+		
+		<!-- Twitter -->
+		<script type="text/javascript" src="php/twitter/jquery.tweet.js"></script>
+		
+		<!-- MixItUp -->
+		<script type="text/javascript" src="js/jquery.mixitup.js"></script>
+		
+		<!-- JackBox -->
+		<script type="text/javascript" src="jackbox/js/jackbox-packed.min.js"></script>
+		
+		<!-- CloudZoom -->
+		<script type="text/javascript" src="js/zoomsl-3.0.min.js"></script>
+		
+		<!-- Main Script -->
+		<script type="text/javascript" src="js/script.js"></script>
+		  <script  src="js/modal.js"></script>
+		
+		
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+			<script type="text/javascript" src="js/script_ie.js"></script>
+		<![endif]-->
+		
+		
+	</body>
+
+</html>
