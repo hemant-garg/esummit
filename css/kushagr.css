@@ -15,6 +15,25 @@
     max-width: 185px;
 }
 
+#lower-header{
+    background-color: #000;
+}
+
+#lower-header:before{
+    border: none;
+}
+
+#main-footer, #lower-footer{
+    background-color: #000;
+}
+
+#main-footer p {
+    color: #999;
+}
+
+.copyright {
+    color: #999;
+}
 
 @media screen and (max-width: 768px){
     #logo img{
