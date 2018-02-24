@@ -1,0 +1,22 @@
+
+
+#main-header{
+    background-color: #000;
+}
+
+#newsletter{
+    background-color: rgba(100,100,100,0.5);
+}
+#logo{
+    padding-top: 0; /*reset*/
+}
+
+#logo img{
+    max-width: 185px;
+}
+
+
+@media screen and (max-width: 768px){
+    #logo img{
+    }
+}
