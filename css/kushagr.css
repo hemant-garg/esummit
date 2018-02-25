@@ -1,7 +1,11 @@
 
 
 #main-header{
-    background-color: #000;
+    background: #000;
+}
+
+#main-header blockquote{
+    color: #999;
 }
 
 #newsletter{
@@ -21,6 +25,15 @@
 
 #lower-header:before{
     border: none;
+}
+
+#navigation>li {
+    border-right: none;
+    background: rgba(0,0,0,0.7);
+}
+
+#navigation>li >a{
+    color: #fff;
 }
 
 #main-footer, #lower-footer{
