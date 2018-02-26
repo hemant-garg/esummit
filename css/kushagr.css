@@ -21,19 +21,42 @@
 
 #lower-header{
     background-color: #000;
+    color: #ddd;
 }
 
+@media (max-width: 991px){
+    #menu-button>div>span {
+        background-color: #ddd;
+    }
+}
 #lower-header:before{
     border: none;
 }
 
 #navigation>li {
-    border-right: none;
+    border: none;
     background: rgba(0,0,0,0.7);
+}
+
+#navigation>li:first-child{
+	border-left:none;
+}
+
+#navigation>li:last-child{
+	border-right:none;
 }
 
 #navigation>li >a{
     color: #fff;
+}
+
+#navigation>li>a, #navigation>li>span {
+    border-top: none;
+    border-bottom: none;
+}
+
+.tab-header ul{
+    text-align: center;
 }
 
 #main-footer, #lower-footer{
@@ -49,6 +72,5 @@
 }
 
 @media screen and (max-width: 768px){
-    #logo img{
-    }
+    
 }
