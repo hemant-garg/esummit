@@ -614,3 +614,8 @@ time {
 #main-schedule table tr{
   background-color: #fff;
 }
+
+
+#main-schedule table tr th{
+  vertical-align: top;
+}
