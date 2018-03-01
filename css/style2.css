@@ -1,4 +1,4 @@
-
+/*
 
 
 
@@ -24,7 +24,7 @@
 .site-title{
   padding-left: 0;
 }
-
+*/
 
 
 .md-modal {
@@ -599,4 +599,18 @@ time {
 #speakers .team-member .team-member-info .social-icons{
   padding-bottom: 10px;
 }
+}
+
+
+
+
+
+
+
+#main-schedule table{
+  border: 1px solid black;
+}
+
+#main-schedule table tr{
+  background-color: #fff;
 }

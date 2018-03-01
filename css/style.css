@@ -3587,7 +3587,7 @@ a.button.details-button:hover:after{
 
 /* Shopping Cart */
 
-.shopping-cart-table .product-thumbnail{
+/*.shopping-cart-table .product-thumbnail{
 	width:50px;
 	display:inline-block;
 	margin-right:10px;
@@ -3667,11 +3667,11 @@ a.button.details-button:hover:after{
 }
 
 
-
+*/
 
 
 /* Checkout */
-.your-order-table .product-thumbnail{
+/*.your-order-table .product-thumbnail{
 	width:50px;
 	margin-right:15px;
 	display:inline-block;
@@ -3776,7 +3776,7 @@ a.button.details-button:hover:after{
 
 
 
-/* ==================================== */
+*//* ==================================== */
 		      /* SIDEBAR */
 /* ==================================== */
 
@@ -6083,7 +6083,7 @@ blockquote.link-quote:after{
 
 /* Tables */
 
-table{
+/*table{
 	width:100%;
 	background:#fafbfd;
 	border-radius:5px;
@@ -6142,7 +6142,7 @@ table tr:hover>th{
 
 
 
-
+*/
 
 
 /* Forms */
@@ -7548,7 +7548,7 @@ input.numeric-input:focus{
 		margin:20px 0;
 	}
 	
-	table,
+	/*table,
 	tbody,
 	tr,
 	td,
@@ -7567,7 +7567,7 @@ input.numeric-input:focus{
 	table tr{
 		border:1px solid #ecedf1;
 	}
-	
+	*/
 	
 	.pricing-tables,
 	.pricing-tables tbody,
