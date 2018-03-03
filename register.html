@@ -23,6 +23,8 @@
 		<link href="css/cloud-zoom.css" rel="stylesheet" type="text/css" />
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<link href="css/kushagr.css" rel="stylesheet" type="text/css">
+		<link href="css/style2.css" rel="stylesheet" type="text/css">
+
 
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -92,89 +94,86 @@
 		<div class="container">
 			<!-- Header -->
 			<header id="header" class="animate-onscroll">
-				<!-- Main Header -->
 				<div id="main-header">
-					<div class="container">
-						<div class="row">
-							<!-- Logo -->
-							<div id="logo" class="col-lg-2 col-md-3 col-sm-3">
-								<a href="index.html"><img src="img/logo.png"  alt="Logo"></a>
-							</div>
-							<!-- /Logo -->
-							<!-- Main Quote -->
-							<div class="col-lg-5 col-md-4 col-sm-4 site-title">
-								<h1>eCell MSIT</h1>
-							</div>
-							<!-- /Main Quote -->
-							<!-- Newsletter -->
-							<div class="col-lg-5 col-md-5 col-sm-5">
-								<form id="newsletter" action="php/newsletter-form.php" method="POST">
-									<h5><strong>Sign up</strong> for email updates</h5>
-									<div class="newsletter-form">
-										<div class="newsletter-email">
-											<input type="text" name="newsletter-email" placeholder="Email address">
-										</div>
-										<div class="newsletter-zip">
-											<input type="text" name="newsletter-zip" placeholder="Zip code">
-										</div>
-										<div class="newsletter-submit">
-											<input type="submit" value="">
-											<i class="icons icon-right-thin"></i>
-										</div>
+				<div class="container">
+					<div class="row">
+						<!-- Logo -->
+						<div id="logo" class="col-lg-3 col-md-3 col-sm-3">
+							<a href="index.html">
+								<img src="img/logo.png" alt="Logo">
+							</a>
+						</div>
+						<!-- /Logo -->
+						<!-- Main Quote -->
+						<div class="col-lg-5 col-md-4 col-sm-4">
+							<blockquote>Formal education will make you a living;
+								<br>self-education will make you a fortune.
+							</blockquote>
+						</div>
+						<!-- /Main Quote -->
+						<!-- Newsletter -->
+						<div class="col-lg-4 col-md-5 col-sm-5">
+							<form id="newsletter" action="php/newsletter-form.php" method="POST">
+								<h5>
+									<strong>If already registered,</strong> get your UID here.
+								</h5>
+								<div class="newsletter-form">
+									<div class="newsletter-email">
+										<input type="text" name="newsletter-email" placeholder="Email address">
 									</div>
-								</form>
-							</div>
-							<!-- /Newsletter -->
+									<div class="newsletter-zip">
+										<input type="text" name="newsletter-zip" placeholder="Mobile">
+									</div>
+									<div class="newsletter-submit">
+										<input type="submit" value="">
+										<i class="icons icon-right-thin"></i>
+									</div>
+								</div>
+							</form>
 						</div>
+						<!-- /Newsletter -->
 					</div>
 				</div>
-				<!-- /Main Header -->
-				<!-- Lower Header -->
-				<div id="lower-header">
-					<div class="container">
-						<div id="menu-button">
-							<div>
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-							<span>Menu</span>
+			</div>
+			<!-- /Main Header -->
+			<!-- Lower Header -->
+			<div id="lower-header">
+				<div class="container">
+					<div id="menu-button">
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
-						<ul id="navigation">
-							<!-- Home -->
-							<li class="home-button current-menu-item">
-								<a href="index.html"><i class="icons icon-home"></i></a>
-								
-							</li>
-							<li >
-								<a href="index.html">E-Summit</a>
-								
-							</li>
-							<li >
-								<a href="ifair.html">Internship Fair</a>
-								
-							</li>
-							<li >
-								<a href="competitions.html">Competitions</a>
-								
-							</li>
-							<li >
-								<a href="schedule.html">Schedule</a>
-								
-							</li>
-							<li >
-								<a href="otherinitiaves.html">Other Initiativess</a>
-								
-							</li>
-						
-							<li class="donate-button ">
-								<a href="register.html">Buy Tickets</a>
-							</li>
-							<!-- /Donate -->
-						</ul>
+						<span>Menu</span>
 					</div>
+					<ul id="navigation">
+						<!-- Home -->
+						<li class="home-button current-menu-item">
+							<a href="index.html">
+								<i class="icons icon-home"></i>
+							</a>
+						</li>
+						<li>
+							<a href="index.html">E-Summit</a>
+						</li>
+						<li>
+							<a href="ifair.html">Internship &amp; Job Fair</a>
+						</li>
+						<li>
+							<a href="competitions.html">Competitions</a>
+						</li>
+						<li>
+							<a href="faq.html">FAQs</a>
+						</li>
+						<li class="donate-button ">
+							<a href="register.html">Buy Tickets</a>
+						</li>
+						<!-- /Donate -->
+					</ul>
 				</div>
-				<!-- /Lower Header -->
+			</div>
+			<!-- /Lower Header -->
 			</header>
 			<!-- /Header -->
 
@@ -183,10 +182,10 @@
 		<!-- Section -->
 		<section class="section full-width-bg">
 
-				<div class="container">
+				<div class="container" id="registerpage">
 				
 						<div class="row">
-					<div class="col-lg-8 col-md-8 col-sm-12 col-md-push-2 animate-onscroll">
+					<div id="registerformcontainer" class="col-lg-6 col-md-6 col-sm-12 col-md-push-3 animate-onscroll">
 					
 												<!-- Tabs -->
 						<div class="tabs">
@@ -202,109 +201,117 @@
 							<div class="tab-content">
 								
 								<div id="tab11" class="tab">
-									<form>
+									<form method="post" id="register-form-1">
+										<h4 class="text-danger text-center formmessage"></h4>
 										  <div class="form-row">
 										    <div class="form-group col-md-6">
-										      <label for="inputEmail4">Name</label>
-										      <input type="text" class="form-control" id="inputEmail4" placeholder="Your Name">
+										      <label for="username">Name</label>
+										      <input type="text" name="username" class="form-control" id="username" placeholder="Your Name">
 										    </div>
 										    <div class="form-group col-md-6">
-										      <label for="inputPassword4">Mobile Number</label>
-										      <input type="text" class="form-control" id="inputPassword4" placeholder="Number">
+										      <label for="usermobile">Mobile Number</label>
+										      <input type="text" minlength="10" maxlength="10" name="usermobile" class="form-control" id="usermobile" placeholder="Number">
 										    </div>
 
 										  </div>
 										  
 										  <div class="form-group col-md-6">
 										  	
-										    <label for="inputAddress">Email Address</label>
-										    <input type="text" class="form-control" id="inputAddress" placeholder="example@gmail.com">
+										    <label for="useremail">Email Address</label>
+										    <input type="text" name="useremail" class="form-control" id="useremail" placeholder="example@gmail.com">
 										  </div>
 										  <div class="form-group col-md-6">
 										  	
-										    <label for="inputAddress">Year of Study</label>
-										    <input type="text" class="form-control" id="inputAddress" placeholder="e.g. 2016">
+										    <label for="useryos">Year of Study</label>
+										    <input type="text" name="useryos" class="form-control" id="useryos" placeholder="e.g. 2nd year">
 										  </div>
 										  <div class="clearfix"></div>
-										  	
-											<div class="form-check col-md-6">
-											  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-											  <label class="form-check-label" for="inlineRadio1">MSI-MSIT Student</label>
-											</div>
-											<div class="form-check col-md-6">
-											  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-											  <label class="form-check-label" for="inlineRadio2">Other College</label>
-											</div>
-										  
+										  <br>&nbsp;&nbsp;
+										<input type="radio" name="msitcollege" value="yes" id="radio-1"><label for="radio-1">MSI-MSIT</label>
+										<input type="radio" name="msitcollege" value="no" id="radio-2"><label for="radio-2">Other College</label>
+															
+										
+										  					  
 										  <div class="form-group col-md-6">
-										    <label for="inputAddress2">College</label>
-										    <textarea name="" id="" rows="1" placeholder="College name"></textarea>
+										    <label for="usercollege">College</label>
+										    <input type="text" name="usercollege" id="usercollege"  placeholder="College name"></textarea>
 										  </div>
 										  <div class="form-group col-md-6">
-										    <label for="inputAddress2">Course</label>
-										    <input type="text"  class="form-control" id="inputAddress2" placeholder="e.g. B.Tech">
+										    <label for="usercourse">Course</label>
+										    <input type="text" name="usercourse" class="form-control" id="usercourse" placeholder="e.g. B.Tech">
 										  </div>
-										  <div class="clearfix"></div>
-											 <div class="form-check col-md-6">
-											    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-											    <label class="form-check-label" for="exampleCheck1">ECELL MEMBER ?</label>
-											  </div>
-										  
-										  <div class="form-group col-md-6">
-										    <button type="button" class="form-control-file" id="exampleFormControlFile1">Upload your Resume</button>
+										<div class="clearfix"></div><br>
+										  &nbsp;&nbsp;&nbsp;
+										 <div class="form-group col-md-6"> 
+										  <input type="checkbox" id="ecellmember"><label for="ecellmember">Are you a eCell MSIT Member?</label>
 										  </div>
+										   
 
-										  <div class="clearfix"></div>
-										  <br>
+											  <div class="input-file-container col-md-6">  
+											    <input class="input-file" id="my-file" type="file">
+											    <label tabindex="0" for="my-file" class="input-file-trigger">Upload Resume...</label>
+											    <p class="file-return"></p>
+											  </div>
+											  
+											
+											<div class="clearfix"></div>
+											<br>
+										  <h3 id="ticketprice" class="text-center text-primary">Price - Rs <span id="price">250</span>/-</h3>
+										  <h4 class="text-danger text-center formmessage"></h4>
 										  <div class="col-md-12 text-center">
-										  	<button type="submit" class="button donate big">Buy Your Ticket</button>
+										  	<button type="submit" id="submit" class="button donate big">Buy Your Ticket</button>
 										  </div>
-										  
+										  </form>
 										 </div>
-										</form>
-								</div>
+										
+								
 								
 								<div id="tab22" class="tab">
-									<form>
+									<form method="post" id="register-form-2">
+											<h4 class="text-danger text-center formmessage"></h4>
 										  <div class="form-row">
 										    <div class="form-group col-md-6">
-										      <label for="inputEmail4">Name</label>
-										      <input type="text" class="form-control" id="inputEmail4" placeholder="Your Name">
+										      <label for="starname">Name</label>
+										      <input type="text" name="starname" class="form-control" id="starname" placeholder="Your Name">
 										    </div>
 										    <div class="form-group col-md-6">
-										      <label for="inputPassword4">Mobile Number</label>
-										      <input type="text" class="form-control" id="inputPassword4" placeholder="Number">
+										      <label for="starmobile">Mobile Number</label>
+										      <input type="text" minlength="10" maxlength="10" name="starmobile" class="form-control" id="starmobile" placeholder="Number">
 										    </div>
 
 										  </div>
 										  
 										  <div class="form-group col-md-6">
 										  	
-										    <label for="inputAddress">Email Address</label>
-										    <input type="text" class="form-control" id="inputAddress" placeholder="example@gmail.com">
+										    <label for="staremail">Email Address</label>
+										    <input type="text" name="staremail" class="form-control" id="staremail" placeholder="example@gmail.com">
 										  </div>
 										  <div class="form-group col-md-6">
-										    <label for="inputAddress2">Referral Code</label>
-										    <input type="text"  class="form-control" id="inputAddress2" placeholder="Referral Code">
+										    <label for="refercode">Referral Code ( Optional )</label>
+										    <input type="text" name="refercode" class="form-control" id="refercode" placeholder="Referral Code">
 										  </div>
 										  
 										  <div class="form-group col-md-6">
-										    <label for="inputAddress2">Name of Organization</label>
-										    <textarea name="" id="" rows="1" placeholder="Organization name"></textarea>
+										    <label for="organization">Name of Organization</label>
+										    <textarea name="organization" id="organization" rows="1" placeholder="Organization name"></textarea>
 										  </div>
 										  <div class="form-group col-md-6">
-										    <label for="inputAddress2">Designation</label>
-										    <input type="text"  class="form-control" id="inputAddress2" placeholder="Degignation">
+										    <label for="designation">Designation</label>
+										    <input type="text" name="designation" class="form-control" id="designation" placeholder="Designation">
 										  </div>
 
 										  <div class="clearfix"></div>
 										  <br>
+										  <h3 id="ticketprice" class="text-center text-primary">Price - Rs <span id="price">500</span>/-</h3>
+										  <h4 class="text-danger text-center formmessage"></h4>
 										  <div class="col-md-12 text-center">
-										  	<button type="submit" class="button donate big">Buy Your Ticket</button>
+										  	<button type="submit" id="submit" class="button donate big">Buy Your Ticket</button>
 										  </div>
-										  
+										  </form>
 										 </div>
-										</form>
+										  
+										
+										</div>
 								</div>
 								
 								
@@ -499,7 +506,7 @@ Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. 
 		
 		<!-- Main Script -->
 		<script type="text/javascript" src="js/script.js"></script>
-		
+		<script type="text/javascript" src="js/formvalidate.js"></script>
 		
 		<!--[if lt IE 9]>
 			<script type="text/javascript" src="js/jquery.placeholder.js"></script>
