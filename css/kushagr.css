@@ -59,6 +59,10 @@
     text-align: center;
 }
 
+.payment-response{
+    width: 125px;
+}
+
 #main-footer, #lower-footer{
     background-color: #000;
 }
