@@ -17,6 +17,37 @@ require('./sdk/Instamojo.php');
      $url = "https://test.instamojo.com/api/1.1/" ;
      $api = new Instamojo\Instamojo($API_KEY, $AUTH_TOKEN,$url);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  function arr2std($arr){
 
@@ -37,10 +68,34 @@ $mysqli = new mysqli($GLOBALS["mysql_hostname"], $GLOBALS["mysql_username"], $GL
   return $mysqli;
 
 }
+function init()
+{
+	$sql="
+CREATE TABLE IF NOT EXISTS `payments` (
+  `txnid` varchar(100) NOT NULL,
+  `buyer_name` varchar(100) NOT NULL,
+  `amount` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `status` varchar(100) NOT NULL DEFAULT 'PENDING',
+  `extra0` text NOT NULL,
+  `extra1` text NOT NULL,
+  `insta_payment_id` varchar(100) NOT NULL,
+  `insta_req_id` varchar(100) NOT NULL,
+  `datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`txnid`),
+  UNIQUE KEY `txnid` (`txnid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+";
 
+
+execute($sql);
+
+}
 function execute($q){
 	$mysqli=mysqlc();
    
+
 $query = $mysqli->query( $q); 
 $mysqli->close();
 return $query;

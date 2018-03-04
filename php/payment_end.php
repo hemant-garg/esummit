@@ -10,6 +10,24 @@ $resp='{"id":"14cc376c76cb40d4b723256d95537ead","phone":"+918527483275","email":
 try {
     $response = $api->paymentRequestStatus($_GET['payment_request_id']);
 
+ 
+
+$response=arr2std($response);
+
+if(sizeof($response->payments)>0){
+
+	if($response->payments[0]->status=="Credit"){
+
+?>
+<h1>SUCCESS</h1>
+<?php
+		 
+	}
+
+}
+
+
+
 }
 catch (Exception $e) {
 	 $response=json_decode($resp);

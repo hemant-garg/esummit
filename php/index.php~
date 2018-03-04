@@ -1,0 +1,39 @@
+<?php
+
+if($_GET["pass"]=="ecell123")
+	{
+
+ 
+	require_once(dirname(__FILE__)."/config.inc.php");
+
+/*
+$json_string =execute("SELECT * FROM `payments` WHERE 1");
+
+$array = json_decode($json_string, true);*/
+$array=execute("SELECT * FROM `payments` WHERE 1");
+
+
+?>
+
+<table border="1" cellpadding="10">
+    <thead><tr><th>Time</th><th>Name</th><th>E-Mail</th><th>Amount</th><th>Status</th></tr></thead>
+    <tbody>
+    <?php foreach($array as $key => $value): ?>
+        <tr>
+ <td><?php echo $value['TimeStamp']; ?></td>
+ <td><?php echo $value['TimeStamp']; ?></td>
+ <td><?php echo $value['TimeStamp']; ?></td>
+ <td><?php echo $value['TimeStamp']; ?></td>
+ <td><?php echo $value['TimeStamp']; ?></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+
+
+
+
+}	
+
+
+?>

@@ -6,6 +6,8 @@ $resp='{"id":"14cc376c76cb40d4b723256d95537ead","phone":"+918527483275","email":
 
 require_once(dirname(__FILE__)."/config.inc.php");
 
+   init();
+   
 $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
  
 $file=  basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
@@ -46,6 +48,7 @@ echo '<br>';
 		        "buyer_name" =>$data->buyer_name,
 		        "phone" => $data->phone,
 		        "amount" => $data->amount,
+		        "send_sms" => true,
 		        "send_email" => true,
 		        "email" => $data->email,
 		        "webhook" => $server."/payment_hook.php",
@@ -77,7 +80,7 @@ echo '<br><br><br><h1>  <a href="'.$response->longurl.'">PAY Rs. '.$data->amount
 	
 
 
-$sql='INSERT INTO `payments`(`txnid`, `buyer_name`, `amount`, `phone`, `email`, `status`, `insta_payment_id`, `insta_req_id`, `datetime`,`extra0`,`extra1`) VALUES ("'.$txnid.'","'.$data->buyer_name.'","'.$data->amount .'","'.$data->email .'","'.$data->phone .'","PENDING","","",NOW(),"{}","'.mysql_escape_string(json_encode($data)).'")';
+$sql='INSERT INTO `payments`(`txnid`, `buyer_name`, `amount`, `phone`, `email`, `status`, `insta_payment_id`, `insta_req_id`, `datetime`,`extra0`,`extra1`) VALUES ("'.$txnid.'","'.$data->buyer_name.'","'.$data->amount .'","'.$data->phone .'","'.$data->email .'","PENDING","","",NOW(),"{}","'.mysql_escape_string(json_encode($data)).'")';
 
 /*
 echo $sql;*/
