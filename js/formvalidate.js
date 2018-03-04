@@ -52,7 +52,7 @@ $(document).ready(function(){
    
 
     $('#register-form-1 #submit').on('click', function(e) {
-        e.preventDefault();
+        // e.preventDefault();
             var username = $("#register-form-1 #username").val();
             var usermobile = $("#register-form-1 #usermobile").val();
             var useremail = $("#register-form-1 #useremail").val();
@@ -60,7 +60,7 @@ $(document).ready(function(){
             var usercollege = $("#register-form-1 #usercollege").val();
             var usercourse = $("#register-form-1 #usercourse").val();
 
-            var name_regex = /^[a-zA-Z]+$/;
+            var name_regex = /^^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$$/;
             var email_regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
             var number_regex = /^[789]\d{9}$/;
             var message = '';
@@ -71,41 +71,45 @@ $(document).ready(function(){
                 message+="* All fields are mandatory *";
                 $('.formmessage').text(message);
                 return false;
-                }
+            }
                 
-                else if($('input[name="msitcollege"]:checked').length<=0)
-                    {
-                     message+="* All fields are mandatory *";
-                    $('.formmessage').text(message);
-                    return false;
-                    }
-                else if (!username.match(name_regex) || username.length == 0) {
-                    message+="* For your name please use alphabets only *";
-                    $('.formmessage').text(message);
-                    $("#username").focus();
-                    return false;
-                }
-                else if (!usermobile.match(number_regex) || usermobile.length == 0) {
-                    message+="* Please enter a valid mobile number *";
-                    $('.formmessage').text(message); 
-                    $("#usermobile").focus();
-                    return false;
-                 }
-                else if (!useremail.match(email_regex) || useremail.length == 0) {
-                    message+="* Please enter a valid email address *";
-                    $('.formmessage').text(message); 
-                    $("#useremail").focus();
-                    return false;
-                 }
+            else if($('input[name="msitcollege"]:checked').length<=0){
+                 message+="* All fields are mandatory *";
+                $('.formmessage').text(message);
+                return false;
+            }
+            else if (!username.match(name_regex) || username.length == 0) {
+                message+="* Please enter a valid name *";
+                $('.formmessage').text(message);
+                $("#username").focus();
+                return false;
+            }
+            else if (!usermobile.match(number_regex) || usermobile.length == 0) {
+                message+="* Please enter a valid mobile number *";
+                $('.formmessage').text(message); 
+                $("#usermobile").focus();
+                return false;
+             }
+            else if (!useremail.match(email_regex) || useremail.length == 0) {
+                message+="* Please enter a valid email address *";
+                $('.formmessage').text(message); 
+                $("#useremail").focus();
+                return false;
+             }
                  
-                 if (typeof ($("#my-file")[0].files) != "undefined") {
-                        var size = parseFloat($("#my-file")[0].files[0].size / 1024).toFixed(2);
-                        if(size>500){
-                            message+= "** File size must be less than 500kb **";
-                        }
-                    } 
-               
-                 $('.formmessage').text(message); 
+            else if (typeof ($("#my-file")[0].files) != "undefined") {
+                var size = parseFloat($("#my-file")[0].files[0].size / 1024).toFixed(2);
+                if(size>500){
+                    message+= "** File size must be less than 500kb **";
+                }
+                $('.formmessage').text(message); 
+                console.log("file error");
+                return false ;
+            } 
+            else{
+                console.log("Validation passsed")
+                return true;
+            }
     });
 
 
