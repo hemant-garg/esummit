@@ -59,6 +59,43 @@
     text-align: center;
 }
 
+.yellow-banner{
+    background: #FFF176;
+}
+
+.banner:hover{
+    background: #333;
+}
+
+.yellow-banner p{
+    color: #ffc30d;
+}
+
+.yellow-banner .icons{
+    color: #FDD835;
+}
+
+.yellow-banner h4{
+    color: #FFCA28;
+}
+
+.green-banner{
+    background: #A5D6A7;
+}
+
+.green-banner p{
+    color: #43A047;
+}
+
+.green-banner .icons{
+    color: #81C784;
+}
+
+.green-banner h4{
+    color: #2E7D32;
+}
+
+
 .payment-response{
     width: 125px;
 }
