@@ -20,7 +20,7 @@ $data=arr2std($data);
 
 $response=arr2std($response);
 
-if(sizeof($response->payments)>0){
+if(sizeof($response->payments)>0&&$response->phone==$data->buyer_phone&&$response->email==$data->buyer){
 
 	if($response->payments[0]->status=="Credit"){
 
