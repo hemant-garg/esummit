@@ -55,8 +55,24 @@
     border-bottom: none;
 }
 
+#main_flex_1 {
+    background: url(../img/up1.jpg) no-repeat;
+}
+
+#main_flex_2 {
+    background: url(../img/up2.jpg) no-repeat;
+}
+
+#main_flex_3 {
+    background: url(../img/up3.jpg) no-repeat;
+}
+
 .tab-header ul{
     text-align: center;
+}
+
+.tab-header li{
+    width: 45%;
 }
 
 .yellow-banner{
