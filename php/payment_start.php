@@ -62,14 +62,14 @@ $response=arr2std($response);
 	}
 		catch (Exception $e) {
 
-		    print('Using Dummy as Error: ' . $e->getMessage());
+		   // print('Using Dummy as Error: ' . $e->getMessage());
 		
 		    $response=json_decode($resp);
 		}
 
 
 $txnid=$response->id;
-
+/*
 echo '<br><br><br>TXNID : '.$txnid;
 echo '<br>buyer_name : '.$data->buyer_name;
 echo '<br>phone : '.$data->phone;
@@ -78,7 +78,10 @@ echo '<br>email : '.$data->email;
 
 echo '<br><br><br><h1>  <a href="'.$response->longurl.'">PAY Rs. '.$data->amount.'</a> </h1><br>'; 
 	
+*/
 
+
+header('Location:'.$response->longurl);
 
 $sql='INSERT INTO `payments`(`txnid`, `buyer_name`, `amount`, `phone`, `email`, `status`, `insta_payment_id`, `insta_req_id`, `datetime`,`extra0`,`extra1`) VALUES ("'.$txnid.'","'.$data->buyer_name.'","'.$data->amount .'","'.$data->phone .'","'.$data->email .'","PENDING","","",NOW(),"{}","'.htmlspecialchars(json_encode($data), ENT_QUOTES, 'UTF-8').'")';
 
