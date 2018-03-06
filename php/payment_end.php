@@ -7,6 +7,7 @@ $resp='{"id":"14cc376c76cb40d4b723256d95537ead","phone":"+918527483275","email":
 
 ?>
 
+<?php $subdir=false; ?>
 <!DOCTYPE html>
 <html>
 
@@ -23,30 +24,30 @@ $resp='{"id":"14cc376c76cb40d4b723256d95537ead","phone":"+918527483275","email":
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 	<!-- Stylesheets -->
-	<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="<?php if($subdir)echo '../' ; ?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	 crossorigin="anonymous">
-	<link href="../css/fontello.css" rel="stylesheet" type="text/css">
-	<link href="../css/flexslider.css" rel="stylesheet" type="text/css">
-	<link href="../js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" media="screen" />
-	<link href="../css/owl.carousel.css" rel="stylesheet" type="text/css">
-	<link href="../css/responsive-calendar.css" rel="stylesheet" type="text/css">
-	<link href="../css/chosen.css" rel="stylesheet" type="text/css">
-	<link href="../jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css" />
-	<link href="../css/cloud-zoom.css" rel="stylesheet" type="text/css" />
-	<link href="../css/style.css" rel="stylesheet" type="text/css">
-	<link href="../css/kushagr.css" rel="stylesheet" type="text/css">
-	<link href="../css/style2.css" rel="stylesheet" type="text/css">
+	<link href="<?php if($subdir)echo '../' ; ?>css/fontello.css" rel="stylesheet" type="text/css">
+	<link href="<?php if($subdir)echo '../' ; ?>css/flexslider.css" rel="stylesheet" type="text/css">
+	<link href="<?php if($subdir)echo '../' ; ?>js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="<?php if($subdir)echo '../' ; ?>css/owl.carousel.css" rel="stylesheet" type="text/css">
+	<link href="<?php if($subdir)echo '../' ; ?>css/responsive-calendar.css" rel="stylesheet" type="text/css">
+	<link href="<?php if($subdir)echo '../' ; ?>css/chosen.css" rel="stylesheet" type="text/css">
+	<link href="<?php if($subdir)echo '../' ; ?>jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css" />
+	<link href="<?php if($subdir)echo '../' ; ?>css/cloud-zoom.css" rel="stylesheet" type="text/css" />
+	<link href="<?php if($subdir)echo '../' ; ?>css/style.css" rel="stylesheet" type="text/css">
+	<link href="<?php if($subdir)echo '../' ; ?>css/kushagr.css" rel="stylesheet" type="text/css">
+	<link href="<?php if($subdir)echo '../' ; ?>css/style2.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<link href="../css/jackbox-ie8.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="../css/ie.css">
+		<link href="<?php if($subdir)echo '../' ; ?>css/jackbox-ie8.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="<?php if($subdir)echo '../' ; ?>css/ie.css">
 		<![endif]-->
 	<!--[if gt IE 8]>
-		<link href="../css/jackbox-ie9.css" rel="stylesheet" type="text/css" />
+		<link href="<?php if($subdir)echo '../' ; ?>css/jackbox-ie9.css" rel="stylesheet" type="text/css" />
 		<![endif]-->
 	<!--[if IE 7]>
-		<link rel="stylesheet" href="../css/fontello-ie7.css">
+		<link rel="stylesheet" href="<?php if($subdir)echo '../' ; ?>css/fontello-ie7.css">
 		<![endif]-->
 	<style type="text/css">
 		.no-fouc {
@@ -54,10 +55,10 @@ $resp='{"id":"14cc376c76cb40d4b723256d95537ead","phone":"+918527483275","email":
 		}
 	</style>
 	<!-- jQuery -->
-	<script src="../js/jquery-1.11.0.min.js"></script>
-	<script src="../js/jquery-ui-1.10.4.min.js"></script>
+	<script src="<?php if($subdir)echo '../' ; ?>js/jquery-1.11.0.min.js"></script>
+	<script src="<?php if($subdir)echo '../' ; ?>js/jquery-ui-1.10.4.min.js"></script>
 	<!-- Preloader -->
-	<script src="../js/jquery.queryloader2.min.js"></script>
+	<script src="<?php if($subdir)echo '../' ; ?>js/jquery.queryloader2.min.js"></script>
 	<script type="text/javascript">
 		$('html').addClass('no-fouc');
 
@@ -115,7 +116,7 @@ $resp='{"id":"14cc376c76cb40d4b723256d95537ead","phone":"+918527483275","email":
 						<!-- Logo -->
 						<div id="logo" class="col-lg-3 col-md-3 col-sm-3">
 							<a href="index.html">
-								<img src="../img/logo.png" alt="Logo">
+								<img src="<?php if($subdir)echo '../' ; ?>img/logo.png" alt="Logo">
 							</a>
 						</div>
 						<!-- /Logo -->
@@ -195,7 +196,7 @@ $fail=1;
             <h1>Payment Successful</h1>
         </section>
         <section class="section gray-bg text-center">
-            <img src="../img/success.svg" alt="" class="payment-response">
+            <img src="<?php if($subdir)echo '../' ; ?>img/success.svg" alt="" class="payment-response">
             <h2>
 
                 Your transaction <strong><?php echo $response->id;?> </strong>was successful. Your UID is <strong><?php echo uid($response); ?></strong>. You should receive an email soon. It is advisable to have screenshot of this page.
@@ -338,7 +339,7 @@ if($fail==1){
 	<!-- Modernizr -->
 	<script type="text/javascript" src="js/modernizr.js"></script>
 	<!-- Sliders/Carousels -->
-	<script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="<?php if($subdir)echo '../' ; ?>js/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<!-- Revolution Slider  -->
 	<script type="text/javascript" src="js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
@@ -346,17 +347,17 @@ if($fail==1){
 	<!-- Calendar -->
 	<script type="text/javascript" src="js/responsive-calendar.min.js"></script>
 	<!-- Raty -->
-	<script type="text/javascript" src="../js/jquery.raty.min.js"></script>
+	<script type="text/javascript" src="<?php if($subdir)echo '../' ; ?>js/jquery.raty.min.js"></script>
 	<!-- Chosen -->
 	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 	<!-- jFlickrFeed -->
-	<script type="text/javascript" src="../js/jflickrfeed.min.js"></script>
+	<script type="text/javascript" src="<?php if($subdir)echo '../' ; ?>js/jflickrfeed.min.js"></script>
 	<!-- InstaFeed -->
 	<script type="text/javascript" src="js/instafeed.min.js"></script>
 	<!-- Twitter -->
 	<script type="text/javascript" src="php/twitter/jquery.tweet.js"></script>
 	<!-- MixItUp -->
-	<script type="text/javascript" src="../js/jquery.mixitup.js"></script>
+	<script type="text/javascript" src="<?php if($subdir)echo '../' ; ?>js/jquery.mixitup.js"></script>
 	<!-- JackBox -->
 	<script type="text/javascript" src="jackbox/js/jackbox-packed.min.js"></script>
 	<!-- CloudZoom -->
@@ -365,7 +366,7 @@ if($fail==1){
 	<script type="text/javascript" src="js/script.js"></script>
 	
 	<!--[if lt IE 9]>
-		<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+		<script type="text/javascript" src="<?php if($subdir)echo '../' ; ?>js/jquery.placeholder.js"></script>
 		<script type="text/javascript" src="js/script_ie.js"></script>
 		<![endif]-->
 </body>
