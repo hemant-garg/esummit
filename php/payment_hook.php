@@ -24,7 +24,7 @@ if(sizeof($response->payments)>0&&$response->phone==$data->buyer_phone&&$respons
 
 	if($response->payments[0]->status=="Credit"){
 
-			$sql='UPDATE `payments` SET  `status`="'.$response->payments[0]->status .'",`extra0`="'.mysql_escape_string(json_encode($data)).'" ,`insta_payment_id`="'.$response->payments[0]->payment_id .'",
+			$sql='UPDATE `payments` SET  `status`="'.$response->payments[0]->status .'",`extra0`="'.htmlspecialchars( json_encode($data), ENT_QUOTES, 'UTF-8').'" ,`insta_payment_id`="'.$response->payments[0]->payment_id .'",
 	`insta_req_id`="'.$response->id .'" WHERE `txnid`="'.$response->id.'";';
 
 

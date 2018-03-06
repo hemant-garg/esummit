@@ -13,7 +13,7 @@ $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP
 $file=  basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
 
 $server=str_replace($file, '', $actual_link);
- 
+ $server="http://example.com";
 
 
 $txnid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
@@ -80,7 +80,7 @@ echo '<br><br><br><h1>  <a href="'.$response->longurl.'">PAY Rs. '.$data->amount
 	
 
 
-$sql='INSERT INTO `payments`(`txnid`, `buyer_name`, `amount`, `phone`, `email`, `status`, `insta_payment_id`, `insta_req_id`, `datetime`,`extra0`,`extra1`) VALUES ("'.$txnid.'","'.$data->buyer_name.'","'.$data->amount .'","'.$data->phone .'","'.$data->email .'","PENDING","","",NOW(),"{}","'.mysql_escape_string(json_encode($data)).'")';
+$sql='INSERT INTO `payments`(`txnid`, `buyer_name`, `amount`, `phone`, `email`, `status`, `insta_payment_id`, `insta_req_id`, `datetime`,`extra0`,`extra1`) VALUES ("'.$txnid.'","'.$data->buyer_name.'","'.$data->amount .'","'.$data->phone .'","'.$data->email .'","PENDING","","",NOW(),"{}","'.htmlspecialchars(json_encode($data), ENT_QUOTES, 'UTF-8').'")';
 
 /*
 echo $sql;*/

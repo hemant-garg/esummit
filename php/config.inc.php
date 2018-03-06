@@ -21,6 +21,29 @@ require('./sdk/Instamojo.php');
 
 
 
+function uid($response)
+{
+	
+
+
+												$hash=hash('md5', $response->id);
+												$uid = substr($hash, 0, 6);
+
+
+$output='';
+												$input=$hash;
+										for ($i = strlen($input) - 1; $i >= 0; $i -= 4) {
+										  $output .= $input[$i];
+						}
+						$uid=$output;
+						 
+
+												$sql='UPDATE `payments` SET insta_req_id="'.$uid.'" WHERE txnid="'. $response->id.'";';;
+												execute($sql);
+
+
+return $uid;
+}
 
 
 
