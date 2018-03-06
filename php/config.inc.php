@@ -3,7 +3,7 @@
 	$GLOBALS["mysql_hostname"] = "127.0.0.1";
 	$GLOBALS["mysql_username"] = "root";
 	$GLOBALS["mysql_password"] = "pass"; 
-	$GLOBALS["mysql_database"] = "ecell";
+	$GLOBALS["mysql_database"] = "ecell_p";
   
 
 	//E_ALL , 0
@@ -15,7 +15,7 @@ require('./sdk/Instamojo.php');
      $API_KEY = "e1c21f21aebb9f9aca56d034bef21ddc";
      $AUTH_TOKEN = "e1f84207a518d9a2094d8c32a6658181";
      $url = "https://test.instamojo.com/api/1.1/" ;
-     $api = new Instamojo\Instamojo($API_KEY, $AUTH_TOKEN,$url);
+     $api = new Instamojo\Instamojo($API_KEY, $AUTH_TOKEN);
 
 
 
