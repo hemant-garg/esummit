@@ -2,7 +2,7 @@
  
 	$GLOBALS["mysql_hostname"] = "127.0.0.1";
 	$GLOBALS["mysql_username"] = "root";
-	$GLOBALS["mysql_password"] = "pass"; 
+	$GLOBALS["mysql_password"] = "password"; 
 	$GLOBALS["mysql_database"] = "ecell_p";
   
 
@@ -10,7 +10,7 @@
 	$GLOBALS["error"] = 0;//E_ALL & ~E_NOTICE;
 
   
-require('./sdk/Instamojo.php');
+    require('./sdk/Instamojo.php');
 
      $API_KEY = "e1c21f21aebb9f9aca56d034bef21ddc";
      $AUTH_TOKEN = "e1f84207a518d9a2094d8c32a6658181";
@@ -23,56 +23,30 @@ require('./sdk/Instamojo.php');
 
 function uid($response)
 {
-	
 
 
-												$hash=hash('md5', $response->id);
-												$uid = substr($hash, 0, 6);
+
+$hash=hash('md5', $response->id);
+$uid = substr($hash, 0, 6);
 
 
 $output='';
-												$input=$hash;
-										for ($i = strlen($input) - 1; $i >= 0; $i -= 4) {
-										  $output .= $input[$i];
-						}
-						$uid=$output;
-						 
+$input=$hash;
 
-												$sql='UPDATE `payments` SET insta_req_id="'.$uid.'" WHERE txnid="'. $response->id.'";';;
-												execute($sql);
+for ($i = strlen($input) - 1; $i >= 0; $i -= 4) {
+    utput .= $input[$i];
+}
+$uid=$output;
+
+
+$sql='UPDATE `payments` SET insta_req_id="'.$uid.'" WHERE txnid="'. $response->id.'";';;
+execute($sql);
 
 
 return $uid;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
- function arr2std($arr){
+function arr2std($arr){
 
  	return json_decode(json_encode($arr));
  }    
