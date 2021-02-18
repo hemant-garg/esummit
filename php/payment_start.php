@@ -1,7 +1,7 @@
 <?php
 
 
-$resp='{"id":"14cc376c76cb40d4b723256d95537ead","phone":"+918527483275","email":"test@gmail.com","buyer_name":"Shivesh N","amount":"100.00","purpose":"TEST ME","expires_at":null,"status":"Pending","send_sms":false,"send_email":true,"sms_status":null,"email_status":"Pending","shorturl":null,"longurl":"https:\/\/test.instamojo.com\/@deedgood49\/14cc376c76cb40d4b723256d95537ead","redirect_url":"https:\/\/hoproject.000webhostapp.com\/pay\/insta\/\/payment_end.php","webhook":"https:\/\/hoproject.000webhostapp.com\/pay\/insta\/\/payment_hook.php","allow_repeated_payments":false,"customer_id":null,"created_at":"2018-03-04T04:20:24.947712Z","modified_at":"2018-03-04T04:20:24.947729Z"}';
+$resp='{"id":"14cc376c76cb40d4b723256d95537ead","phone":"+918888888888","email":"test@gmail.com","buyer_name":"Test User","amount":"100.00","purpose":"TEST ME","expires_at":null,"status":"Pending","send_sms":false,"send_email":true,"sms_status":null,"email_status":"Pending","shorturl":null,"longurl":"https:\/\/test.instamojo.com\/@deedgood49\/14cc376c76cb40d4b723256d95537ead","redirect_url":"https:\/\/hoproject.000webhostapp.com\/pay\/insta\/\/payment_end.php","webhook":"https:\/\/hoproject.000webhostapp.com\/pay\/insta\/\/payment_hook.php","allow_repeated_payments":false,"customer_id":null,"created_at":"2018-03-04T04:20:24.947712Z","modified_at":"2018-03-04T04:20:24.947729Z"}';
 
 
 require_once(dirname(__FILE__)."/config.inc.php");
@@ -30,8 +30,8 @@ if($_POST){
 	
 			    $data=  array("purpose" => "TEST ME",
 		        "amount" => "100", 
-		        "buyer_name" => "Shivesh N",
-		        "phone" => "8527483275", 
+		        "buyer_name" => "Test User",
+		        "phone" => "8888888888", 
 		        "email" => "test@gmail.com" );
 
 				 }
